@@ -7,11 +7,11 @@ This project aims to predict house prices using real estate data sourced from Em
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Dataset](#dataset)
+- [Features](#Features)
 - [Data Cleaning](#data-cleaning)
 - [Feature Engineering](#feature-engineering)
 - [Normalization and Transformation](#normalization-and-transformation)
 - [Modeling](#modeling)
-- [Evaluation](#evaluation)
 - [How to Run](#how-to-run)
 - [Requirements](#requirements)
 - [Conclusion](#conclusion)
@@ -30,12 +30,12 @@ The dataset was sourced from [EmlakJet](https://www.emlakjet.com/) and contains 
 In this step, we addressed various data quality issues such as:
 - **Handling Missing Values**: Missing data was either imputed using the median/mean method or removed if deemed irrelevant.
 - **Outlier Detection and Removal**: We identified outliers using Z-scores and IQR methods and removed them to improve model performance.
-- **Data Type Corrections**: Certain features were cast to appropriate data types (e.g., categorical variables were encoded).
+- **Data Type Corrections**: Certain features were cast to appropriate data types (e.g., categorical variables were encoded with **Target encoding**).
 
 ## Feature Engineering
 Feature engineering is one of the key steps in this project. The following techniques were applied:
 - **Feature Creation**: New features were generated based on existing ones, such as price per square meter.
-- **One-Hot Encoding**: Categorical variables like location and property type were one-hot encoded to be used in machine learning models.
+- **Target Encoding**: Categorical variables like location and property type were Target encoded to be used in machine learning models.
 - **Log Transformation**: Features with a high degree of skewness were transformed using logarithmic scales.
 
 ## Normalization and Transformation
@@ -43,22 +43,8 @@ To ensure that the model converges faster and performs optimally, various normal
 - **Standard Scaling**: Continuous features were scaled using StandardScaler.
 - **Box-Cox Transformation**: Certain skewed features were transformed using the Box-Cox method to normalize their distribution.
 
-## Modeling
-Several machine learning models were trained and evaluated, including:
-- **Linear Regression**
-- **Random Forest**
-- **XGBoost**
-- **Neural Networks**
 
-Hyperparameter tuning was performed using GridSearchCV to optimize each model's performance.
 
-## Evaluation
-The models were evaluated using the following metrics:
-- **Root Mean Squared Error (RMSE)**
-- **Mean Absolute Error (MAE)**
-- **R-squared**
-
-The best-performing model achieved an RMSE of 608,937.77 on the test set.
 
 ## How to Run
 1. Clone the repository:
@@ -71,15 +57,13 @@ The best-performing model achieved an RMSE of 608,937.77 on the test set.
    ```
 3. Run the notebook or Python script:
    ```
-   jupyter notebook House_Price_Prediction.ipynb
+   jupyter notebook Data_Cleaning.ipynb
    ```
 
 ## Requirements
 - Python 3.x
-- Scikit-learn
 - Pandas
 - NumPy
-- XGBoost
 - Matplotlib / Seaborn for visualization
 
 ## Conclusion
