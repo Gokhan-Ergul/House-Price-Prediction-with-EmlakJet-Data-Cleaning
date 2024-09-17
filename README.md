@@ -1,5 +1,5 @@
 # House-Price-Prediction-with-EmlakJet-Data-Cleaning
-##  You can visit my kaggle [page](https://www.kaggle.com/code/gokhanergul/house-price-prediction-with-emlakjet-data-cleaning)  to see my presentation
+#### For a detailed walkthrough of the data scraping and subsequent analysis, you can refer to [my Kaggle notebook](https://www.kaggle.com/code/gokhanergul/house-price-prediction-with-emlakjet-data-cleaning) here.
 
 ## Project Overview
 This project aims to predict house prices using real estate data sourced from EmlakJet. The data goes through extensive preprocessing and feature engineering steps, including data cleaning, normalization, and transformation using techniques like Box-Cox. The goal is to build a robust machine learning model with high predictive performance.
